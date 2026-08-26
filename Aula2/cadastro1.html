@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Cadastro</title>
 </head>
+
 <body>
     <h1>Formulário de Cadastro</h1>
-    <table >
-        <tr>
-            <td>Seu nome:</td>
-            <td><input placeholder="Digite seu nome" type="text"> <br></td>
-        </tr>
-        <tr>
-            <td>Possui alguma restrição alimentar?</td>
-            <td><textarea placeholder="Escreva aqui" ></textarea> </td>
-        </tr>
-    <tr>
-            <td>Selecione o curso:</td>
-            <td><select>
-                <option value="0">---Selecione---</option>
-                <option value="1">Sistemas</option>
-                <option value="2">Agronomia</option>
-                <option value="3">Outros</option> 
-            </select></td>
-        </tr>
-    <tr>
-            <td>Selecione a turma:</td>
-            <td><select>
-                <option value="0">---Selecione---</option>
-                <option value="1">Sistemas</option>
-                <option value="2">Agronomia</option>
-                <option value="3">Outros</option> 
-            </select></td>
-        </tr>
-    <tr>
-            <td>Selecione a turma:</td>
-            <td><input placeholder="ciclano@gmail.com" type="text"></td>
-        </tr>
-    <tr>
-            <td>Senha:</td>
-            <td><input placeholder="********" type="password"></td>
-        </tr>
-    <tr>
-            <td>Confirmar senha:</td>
-            <td><input placeholder="********" type="password"></td>
-        </tr>
-    <tr>
-            <td>Perfil:</td>
-            <td><input type="checkbox" name="perfil"
-                value="professor" > Professor
-                <input type="checkbox" name="perfil"
-                value="aluno" > Aluno</td>
-                <td><button type="submit"> Enviar</button></td>
-        </tr>
-    </table>
+    <form>
+        <table >
+            <tr>
+                <td><label for="nome"><b>Seu nome:</b></label></td>
+                <td><input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"></td>
+            </tr>
+            <tr>
+                <td><label for="restricao"><b>Alguma restrição alimentar?</b></label></td>
+                <td><textarea id="restricao" name="restricao" placeholder="Escreva aqui"></textarea> </td>
+            </tr>
+            <tr>
+                <td><label for="curso"><b>Selecione o curso:</b></label></td>
+                <td><select id="curso" name="curso">
+                        <option value="0">---Selecione---</option>
+                        <option value="1">Sistemas</option>
+                        <option value="2">Agronomia</option>
+                        <option value="3">Outros</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label for="turma"><b>Selecione a turma:</b></label></td>
+                <td><select id="turma" name="turma">
+                        <option value="0">---Selecione---</option>
+                        <option value="1">1° Período</option>
+                        <option value="2">2° Período</option>
+                        <option value="3">3° Período</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label for="email"><b>Email:</b></label></td>
+                <td><input type="text" id="email" name="email" placeholder="ciclano@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><label for="senha"><b>Senha:</b></label></td>
+                <td><input type="password" id="senha" name="senha" placeholder="********"></td>
+            </tr>
+            <tr>
+                <td><label for="cSenha"><b>Confirmar Senha:</b></label></td>
+                <td><input type="password" id="cSenha" name="cSenha" placeholder="********"></td>
+            </tr>
+            <tr>
+                <td><label for="perfil"><b>Perfil:</b></label></td>
+                <td><input type="checkbox" id="professor" name="perfil" value="professor"> Professor
+                    <input type="checkbox" id="aluno" name="perfil" value="aluno"> Aluno
+                    <button type="submit"> Enviar</button>
+            </tr>
+        </table>
+    </form>
 </body>
+
 </html>
