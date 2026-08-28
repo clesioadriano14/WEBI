@@ -7,9 +7,36 @@
     </head>
     <body>
         <video controls width="640" height="360" poster="content/capa.jpg">
-            <source src="content/Avengers.mp4" type="content/video/mp4">
-            <track src="content/Avengers.vtt" kind="subtitles" srclang="en" label="Inglês" default>
-                Seu navegador não suporta a tag de vídeo.
+            <source src="content/Avengers.mp4" type="video/mp4">
+            <track src="content/Avengers.vtt" kind="subtitles" srclang="en"
+                label="Inglês" default>
+            Seu navegador não suporta a tag de vídeo.
         </video>
+        <audio controls>
+            <source src="content/music.mp3"
+                type="audio/mpeg">
+            <source src="content/music.ogg"
+                type="audio/ogg">
+            Seu navegador não suporta áudio.
+        </audio>
+        <p>
+            function boasVindas(){
+                console.log("Olá, mundo!");
+            }
+        </p>
+        <hr>
+        <pre>
+            <code>
+                function boasVindas(){
+                    console.log("Olá, mundo!");
+                }
+            </code>
+        </pre>
+        <hr>
+        <iframe width="480" height="420"
+        src="https://www.youtube.com/embed/1CNkL3uwl6U?si=v7lsGArU-wdPWI3N"
+        title="Player do YouTube"
+        allowfullscreen>
+        </iframe>
     </body>
 </html>
