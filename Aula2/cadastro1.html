@@ -8,20 +8,28 @@
 </head>
 
 <body>
-    <h1>Formulário de Cadastro</h1>
+    <div style="background-color: rgb(32, 182, 57);">
+        <header style="color: rgb(253, 253, 253);">
+            <br>
+            <h1> Formulário de Cadastros</h1>
+        </header>
+        <hr>
+    </div>
     <form>
-        <table >
+        <table width="400">
             <tr>
-                <td><label for="nome"><b>Seu nome:</b></label></td>
-                <td><input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"></td>
+                <td><br><label for="nome"><b>Seu nome:</b></label></td>
+                <td><br><input style="padding: 2%; width: 5.62cm;" type="text" id="nome" name="nome"
+                        placeholder="Digite seu nome completo"></td>
             </tr>
             <tr>
-                <td><label for="restricao"><b>Alguma restrição alimentar?</b></label></td>
-                <td><textarea id="restricao" name="restricao" placeholder="Escreva aqui"></textarea> </td>
+                <td><br><label for="restricao"><b>Possui Alguma restrição alimentar?</b></label></td>
+                <td><br><textarea style="padding: 2%; width: 5.69cm;" id="restricao" name="restricao"
+                        placeholder="Escreva aqui"></textarea> </td>
             </tr>
             <tr>
-                <td><label for="curso"><b>Selecione o curso:</b></label></td>
-                <td><select id="curso" name="curso">
+                <td><br><label for="curso"><b>Selecione o curso:</b></label></td>
+                <td><br><select style="padding: 2%; width: 6cm;" id="curso" name="curso">
                         <option value="0">---Selecione---</option>
                         <option value="1">Sistemas</option>
                         <option value="2">Agronomia</option>
@@ -29,8 +37,8 @@
                     </select></td>
             </tr>
             <tr>
-                <td><label for="turma"><b>Selecione a turma:</b></label></td>
-                <td><select id="turma" name="turma">
+                <td><br><label for="turma"><b>Selecione a turma:</b></label></td>
+                <td><br><select style="padding: 2%; width: 6cm;" id="turma" name="turma">
                         <option value="0">---Selecione---</option>
                         <option value="1">1° Período</option>
                         <option value="2">2° Período</option>
@@ -38,22 +46,32 @@
                     </select></td>
             </tr>
             <tr>
-                <td><label for="email"><b>Email:</b></label></td>
-                <td><input type="text" id="email" name="email" placeholder="ciclano@gmail.com"></td>
+                <td><br><label for="email"><b>Email:</b></label></td>
+                <td><br><input style="padding: 2%;  width: 4.5cm;" type="text" id="email" name="email"
+                        placeholder="ciclano@gmail.com"></td>
             </tr>
             <tr>
-                <td><label for="senha"><b>Senha:</b></label></td>
-                <td><input type="password" id="senha" name="senha" placeholder="********"></td>
+                <td><br><label for="senha"><b>Senha:</b></label></td>
+                <td><br><input style="padding: 2%;width: 4.5cm;" type="password" id="senha" name="senha"
+                        placeholder="********"></td>
             </tr>
             <tr>
-                <td><label for="cSenha"><b>Confirmar Senha:</b></label></td>
-                <td><input type="password" id="cSenha" name="cSenha" placeholder="********"></td>
+                <td><br><label for="cSenha"><b>Confirmar Senha:</b></label></td>
+                <td><br><input style="padding: 2%; width: 4.5cm;" type="password" id="cSenha" name="cSenha"
+                        placeholder="********"></td>
             </tr>
             <tr>
-                <td><label for="perfil"><b>Perfil:</b></label></td>
-                <td><input type="checkbox" id="professor" name="perfil" value="professor"> Professor
-                    <input type="checkbox" id="aluno" name="perfil" value="aluno"> Aluno
-                    <button type="submit"> Enviar</button>
+                <td><br><label for="perfil"><b>Perfil:</b></label>
+                </td>
+                <td><br><input style="padding: 2%;" type="checkbox" id="professor" name="perfil" value="professor">
+                    Professor
+                    <input style="padding: 2%;" type="checkbox" id="aluno" name="perfil" value="aluno"> Aluno
+                    <button
+                        style="border: 4cap; padding: 4%; width: 2.2cm;background-color:rgb(32, 182, 57);color: rgb(255, 255, 255);"
+                        type="submit"> Enviar
+                    </button>
+
+                </td>
             </tr>
         </table>
     </form>
