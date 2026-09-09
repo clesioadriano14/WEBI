@@ -1,0 +1,55 @@
+
+h1{
+    margin: auto;
+}
+*{
+    margin: 0;
+}
+
+/* https://images.icon-icons.com/1760/PNG/512/4105941-lock-login-password-security-sign-in-sign-out_113932.png */
+
+#telaLogin{
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    height: 100vh;
+}
+
+#telaCadastro{
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    height: 100vh;
+}
+#janela{
+    margin: auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba( 0, 0, 0, 0.5);
+    background-color: rgb(238, 235, 230);
+}
+#centrocima{
+    color: white;
+    border-radius: 10px;
+    height: 70px;
+    background-color: #0B6A1C;
+    margin: auto; 
+    justify-items: center;
+}
+#dadosCadastro{
+
+    
+}
+#botaoEnviar{
+    
+    border-radius: 20px;
+    border: 4cap; padding: 4%; width: 1.88cm;
+    background-color:  #0B6A1C;
+    color: rgb(255, 255, 255);
+}
