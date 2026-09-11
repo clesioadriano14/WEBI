@@ -13,7 +13,7 @@ h1{
     height: 100vh;
 }
 
-.tela-imagem{
+.telaImagem{
     width: 50%;
     background-image: url('fundo2.avif');
     background-size: cover;
@@ -21,7 +21,7 @@ h1{
     background-repeat: no-repeat;
 }
 
-.tela-conteudo{
+.telaConteudo{
     width: 50%;
     display: grid;
     place-items: center;
@@ -67,38 +67,37 @@ h1{
     font-family: inherit;
 }
 
-.opcoes-login{
+.opcoesLogin{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 85%;
 }
 
-.perfil-fieldset{
-    border: none;
-    padding: 0;
+.perfilFieldset{
+    padding: 1;
 }
 
-.perfil-fieldset legend{
+.perfilFieldset legend{
     font-size: 90%;
     font-weight: bold;
     padding: 0;
     margin-bottom: 5px;
 }
 
-.opcoes-radio{
+.opcoesPerfil{
     display: flex;
     gap: 15px;
 }
 
-.opcao-radio{
+.opcoesPerfil{
     display: flex;
     align-items: center;
     gap: 5px;
     font-weight: normal;
 }
 
-.cadastro-link{
+.cadastroLink{
     text-align: center;
     font-size: 90%;
 }
@@ -110,7 +109,7 @@ h1{
     margin-top: 5px;
 }
 
-.link-secundario{
+.linkSecundario{
     color: #0B6A1C;
     font-size: 89%;
     text-decoration: none;
