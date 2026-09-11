@@ -75,7 +75,7 @@ h1{
 }
 
 .perfilFieldset{
-    padding: 1px;
+    padding: 2 px;
 }
 
 .perfilFieldset legend{
@@ -102,7 +102,7 @@ h1{
     font-size: 90%;
 }
 
-#telaLogin #botaoEnviar,
+#telaLogin #botaoEnviar, #botaoComprar
 #telaCadastro #botaoEnviar{
     width: 100%;
     padding: 10px;
@@ -117,8 +117,15 @@ h1{
 
 #botaoEnviar{
     border: none;
+    height: 4cap;
     border-radius: 20px;
     background-color: #0B6A1C;
     color: rgb(255, 255, 255);
     cursor: pointer;
+}
+
+#formSaldo{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
 }
