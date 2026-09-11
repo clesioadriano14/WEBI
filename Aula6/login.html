@@ -5,64 +5,38 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body id="telaLogin">
-        <div id="janela">
-            <div id="centrocima">
-                <br>
-                <h1><img> Login</h1>
-            </div>
-            <form>
-                
-                <table>
-                    <tr>
-                        <td>
-                            <label for="usuario">
-                                <b>Usuário: </b>
-                            </label>
-                        </td>
-                        <td>
-                            <input style="padding: 2%;" type="text" id="usuario"
-                                name="usuario"
-                                placeholder="Digite seu usuário:">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="senha">
-                                <br><b>Senha:</b>
-                            </label>
-                        </td>
-                        <td>
-                            <br><input style="padding: 2%;" type="password"
-                                id="senha" name="senha" placeholder="*********">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td colspan="2">
-                            <br><button
-                                id="botaoEnviar"
-                                type="submit"> Entrar
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td colspan="2">
-                            <a style="color: black;font-size: 89%;"
-                                href="cadastro1.html">Não tem conta?
-                                Cadastre-se
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+        <div class="tela-imagem"></div>
+        <div class="tela-conteudo">
+            <form id="formLogin" method="post">
+                <h1>LOGIN</h1>
+
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" name="usuario"
+                    placeholder="@mail.com" autocomplete="username" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha"
+                    placeholder="senha" autocomplete="current-password"
+                    required>
+
+                <div class="opcoes-login">
+                    <a href="#" class="link-secundario">Esqueceu a senha?</a>
+                </div>
+
+                <button id="botaoEnviar" type="submit">Entrar</button>
+
+                <p class="cadastro-link">Não tem uma conta?
+                    <a href="cadastro1.html" class="link-secundario">Inscreva-se</a>
+                </p>
+
             </form>
-
         </div>
-
     </body>
 
 </html>
