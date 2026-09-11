@@ -1,81 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulário de Cadastro</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body id="telaCadastro">
-        
-        <div class="telaConteudo">
-            <form id="dadosCadastro" method="post">
-                <h1>Cadastro</h1>
+<body id="telaCadastro">
 
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome"
-                    placeholder="Digite seu nome completo"
-                    autocomplete="name" required>
+    <div class="telaConteudo">
+        <form id="dadosCadastro" method="post">
+            <h1 class="logoIF">
+                <img src="logoif.png" width="280"><br>Cadastre-se
+            </h1>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name"
+                required>
 
-                <label for="restricao">Possui alguma restrição
-                    alimentar?</label>
-                <textarea id="restricao" name="restricao"
-                    placeholder="Escreva aqui"></textarea>
+            <label for="restricao">Possui alguma restrição
+                alimentar?</label>
+            <textarea id="restricao" name="restricao" placeholder="Escreva aqui"></textarea>
 
-                <label for="curso">Curso:</label>
-                <select id="curso" name="curso" required>
-                    <option value="0">---Selecione---</option>
-                    <option value="1">Sistemas</option>
-                    <option value="2">Agronomia</option>
-                    <option value="3">Outros</option>
-                </select>
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso" required>
+                <option value="0">---Selecione---</option>
+                <option value="1">Sistemas</option>
+                <option value="2">Agronomia</option>
+                <option value="3">Outros</option>
+            </select>
 
-                <label for="turma">Turma:</label>
-                <select id="turma" name="turma" required>
-                    <option value="0">---Selecione---</option>
-                    <option value="1">1° Período</option>
-                    <option value="2">2° Período</option>
-                    <option value="3">3° Período</option>
-                </select>
+            <label for="turma">Turma:</label>
+            <select id="turma" name="turma" required>
+                <option value="0">---Selecione---</option>
+                <option value="1">1° Período</option>
+                <option value="2">2° Período</option>
+                <option value="3">3° Período</option>
+            </select>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"
-                    placeholder="ciclano@gmail.com" autocomplete="email"
-                    required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="ciclano@gmail.com" autocomplete="email" required>
 
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha"
-                    placeholder="********" autocomplete="new-password"
-                    required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="********" autocomplete="new-password" required>
 
-                <label for="cSenha">Confirmar senha:</label>
-                <input type="password" id="cSenha" name="cSenha"
-                    placeholder="********" autocomplete="new-password"
-                    required>
+            <label for="cSenha">Confirmar senha:</label>
+            <input type="password" id="cSenha" name="cSenha" placeholder="********" autocomplete="new-password"
+                required>
 
-                <fieldset class="perfilFieldset">
-                    <legend>Perfil:</legend>
-                    <div class="opcoesPerfil">
-                        <label class="opcoesPerfil">
-                            <input type="radio" id="professor" name="perfil"
-                                value="professor"> Professor
-                        </label>
-                        <label class="opcoesPerfil">
-                            <input type="radio" id="aluno" name="perfil"
-                                value="aluno"> Aluno
-                        </label>
-                    </div>
-                </fieldset>
+            <fieldset class="perfilFieldset">
+                <legend>Perfil:</legend>
+                <div class="opcoesPerfil">
+                    <label class="opcoesPerfil">
+                        <input type="radio" id="professor" name="perfil" value="professor"> Professor
+                    </label>
+                    <label class="opcoesPerfil">
+                        <input type="radio" id="aluno" name="perfil" value="aluno"> Aluno
+                    </label>
+                </div>
+            </fieldset>
 
-                <button id="botaoEnviar" type="submit">Enviar</button>
+            <button id="botaoEnviar" type="submit">Enviar</button>
 
-                <p class="cadastroLink">Já tem uma conta?
-                    <a href="login.html" class="linkSecundario">Entrar</a>
-                </p>
-            </form>
-        </div>
-    </body>
+            <p class="cadastroLink">Já tem uma conta?
+                <a href="login.html" class="linkSecundario">Entrar</a>
+            </p>
+        </form>
+    </div>
+</body>
 
 </html>
