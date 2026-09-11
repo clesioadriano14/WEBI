@@ -1,37 +1,37 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     margin: auto;
 }
 
 #telaLogin,
-#telaCadastro{
-    display: flex;
+#telaCadastro {
+    display: grid;
     height: 100vh;
-}
-
-.telaImagem{
-    width: 50%;
-    background-image: url('fundo2.avif');
+    place-items: center;
+    background-image: url('newfundo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.telaConteudo{
-    width: 50%;
+
+.telaConteudo {
+    width: 90%;
+    max-width: 380px;
     display: grid;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     place-items: center;
-    background-color: white;
-    overflow-y: auto;
-    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.70);
+    border-radius: 16px;
+    padding: 30px 40px;
 }
 
 #telaLogin form,
-#telaCadastro form{
+#telaCadastro form {
     width: 320px;
     display: flex;
     flex-direction: column;
@@ -39,14 +39,14 @@ h1{
 }
 
 #telaLogin form h1,
-#telaCadastro form h1{
+#telaCadastro form h1 {
     text-align: center;
     color: #0B6A1C;
     margin-bottom: 10px;
 }
 
 #telaLogin label,
-#telaCadastro label{
+#telaCadastro label {
     font-size: 90%;
     font-weight: bold;
 }
@@ -57,7 +57,7 @@ h1{
 #telaCadastro input[type="email"],
 #telaCadastro input[type="password"],
 #telaCadastro select,
-#telaCadastro textarea{
+#telaCadastro textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -67,55 +67,56 @@ h1{
     font-family: inherit;
 }
 
-.opcoesLogin{
+.opcoesLogin {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 85%;
 }
 
-.perfilFieldset{
-    padding: 2 px;
+.perfilFieldset {
+    padding: 3px;
 }
 
-.perfilFieldset legend{
+.perfilFieldset legend {
     font-size: 90%;
     font-weight: bold;
     padding: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.opcoesPerfil{
+.opcoesPerfil {
     display: flex;
     gap: 15px;
 }
 
-.opcoesPerfil{
+.opcoesPerfil {
     display: flex;
     align-items: center;
     gap: 5px;
     font-weight: normal;
 }
 
-.cadastroLink{
+.cadastroLink {
     text-align: center;
     font-size: 90%;
 }
 
-#telaLogin #botaoEnviar, #botaoComprar
-#telaCadastro #botaoEnviar{
+#telaLogin #botaoEnviar,
+#botaoComprar,
+#telaCadastro #botaoEnviar {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
 }
 
-.linkSecundario{
+.linkSecundario {
     color: #0B6A1C;
     font-size: 89%;
     text-decoration: none;
 }
 
-#botaoEnviar{
+#botaoEnviar {
     border: none;
     height: 4cap;
     border-radius: 20px;
@@ -123,8 +124,17 @@ h1{
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
+#botaoEntrar {
+    border: none;
+    height: 4cap;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #0B6A1C;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
 
-#formSaldo{
+#formSaldo {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
