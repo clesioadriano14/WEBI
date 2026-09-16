@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body id="telaLogin">
-        <div class="telaImagem"></div>
-        <div class="telaConteudo">
-            <form id="formLogin" method="post">
-                <h1>LOGIN</h1>
+<body id="telaLogin">
 
-                <label for="usuario">Usuário</label>
-                <input type="text" id="usuario" name="usuario"
-                    placeholder="@mail.com" autocomplete="username" required>
+    <div class="telaConteudo">
+        <form id="formLogin" method="post" novalidate>
+            <h1 class="logoIF">
+                <img src="logoif.png" width="280"><br>Login
+            </h1>
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" placeholder="user@mail.com" autocomplete="username" required>
 
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha"
-                    placeholder="senha" autocomplete="current-password"
-                    required>
-                <div class="opcoesLogin">
-                    <a href="#" class="linkSecundario">Esqueceu a senha?</a>
-                </div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="********" autocomplete="current-password"
+                required>
+            <div class="opcoesLogin">
+                <a href="#" class="linkSecundario">Esqueceu a senha?</a>
+            </div>
 
-                <button id="botaoEnviar" type="submit">Entrar</button>
+            <button id="botaoEntrar" type="submit">Entrar 
+                <a href="saldo.html"></a>
+            </button>
 
-                <p class="cadastro-link">Não tem uma conta?
-                    <a href="cadastro1.html" class="linkSecundario">Inscreva-se</a>
-                </p>
+            <p class="cadastroLink">Não tem uma conta?
+                <a href="cadastro1.html" class="linkSecundario">Inscreva-se</a>
+            </p>
+            <p class="cadastroLink">
+                <a href="saldo.html" class="linkSecundario">Saldo</a>
+            </p>
 
-            </form>
-        </div>
-    </body>
+        </form>
+    </div>
+</body>
 
 </html>

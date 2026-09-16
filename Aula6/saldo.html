@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Saldo</title>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body id="telaSaldo">
-        <div class="telaImagem"> </div>
-        <div class="telaConteudo">
-            <form id="formSaldo" method="post">
-                <h1>Saldo e Créditos</h1>
+<body id="telaSaldo">
+    <div class="telaConteudo">
+        <form id="formSaldo" method="post">
+            <h1 class="logoIF">
+                <img src="logoif.png" width="280">
+                <p>Saldo e Créditos</p>
+            </h1>
+            <div class="infoUsuario">
+                <p><b>Usuário:</b> Clésio Adriano de C. Filho</p>
+                <p><b>Perfil:</b> Aluno</p>
+            </div>
 
-                <label for="usuario">Usuário: Clésio Adriano de C. Filho</label>
+            <p class="creditosDisponiveis"><b>Créditos
+                    Disponíveis:</b> R$ 0,00</p>
+            <div class="comprarCreditos">
+                <label for="quantidade">Quantidade (R$):</label>
+                <input type="number" id="quantidade" name="quantidade" min="0" step="0.01" placeholder="0,00" required>
+                <button id="botaoComprar" type="submit">Comprar</button>
+            </div>
+            <div class="infoMensagem">
+                <p>💡Débito automático conforme refeição e perfil do usuário
+            </div>
+            <p class="cadastroLink">
+                <a href="cadastro1.html" class="linkSecundario">Voltar ao cadastro</a>
+            </p>
+        </form>
+    </div>
+</body>
 
-                <label for="perfil">Perfil: Aluno</label>
-
-                <div class="opcoes">
-
-                </div>
-            </form>
-        </div>
-    </body>
 </html>
