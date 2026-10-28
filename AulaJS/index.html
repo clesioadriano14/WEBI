@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Tarefas</title>
+    </head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        li {
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+    </style>
+    <body>
+        <h1>Lista de Tarefas</h1>
+        <main>
+            <input style="width: 300px; padding: 10px; margin: 10px;" id="nome"
+                type="text"
+                placeholder="Digite o nome da tarefa" />
+            <button style="padding: 20px; margin: 20px;"
+                id="adicionar">Cadastrar</button>
+            <div>
+                <ul>
+                </ul>
+            </div>
+        </main>
+
+    </body>
+    <script>
+    const inputNome = document.getElementById('nome');
+    const btnAdicionar = document.getElementById('adicionar');
+    const ul = document.querySelector('ul');
+
+    btnAdicionar.addEventListener('click', () => {
+        const nomeTarefa = inputNome.value.trim();
+        if (nomeTarefa !== '') {
+            const li = document.createElement('li');
+            li.textContent = nomeTarefa;
+            ul.appendChild(li);
+            inputNome.value = '';
+        }
+    });
+</script>
+</html>
