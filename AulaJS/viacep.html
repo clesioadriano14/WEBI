@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consulta CEP por API</title>
+    </head>
+    <style>
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: blueviolet;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+main {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 650px;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+h1 {
+    color: #111827;
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 15px;
+}
+
+
+h1,
+main > .form-group:nth-child(2),
+main > .form-group:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #1f2937;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+input:read-only {
+    background-color: #f9fafb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    border-color: #e5e7eb;
+}
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    h1,
+    main > .form-group:nth-child(2),
+    main > .form-group:nth-child(3) {
+        grid-column: auto;
+    }
+}
+
+    </style>
+    <body>
+        <main>
+            <h1>Consulta de CEP por API:</h1>
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" maxlength="8" id="cep" onblur="buscarCep()">
+            </div>
+            <div class="form-group">
+                <label> Logradouro:</label>
+                <input type="text" id="logradouro" readonly>
+            </div>
+            <div class="form-group">
+                <label> Bairro:</label>
+                <input type="text" id="bairro" readonly>
+            </div>
+            <div class="form-group">
+                <label> Complemento:</label>
+                <input type="text" id="complemento" readonly>
+            </div>
+            <div class="form-group">
+                <label> Unidade:</label>
+                <input type="text" id="unidade" readonly>
+            </div>
+            <div class="form-group">
+                <label> Localidade:</label>
+                <input type="text" id="localidade" readonly>
+            </div>
+            <div class="form-group">
+                <label> UF:</label>
+                <input type="text" id="uf" readonly>
+            </div>
+            <div class="form-group">
+                <label> Estado:</label>
+                <input type="text" id="estado" readonly>
+            </div>
+            <div class="form-group">
+                <label> Região:</label>
+                <input type="text" id="regiao" readonly>
+            </div>
+            <div class="form-group">
+                <label> IBGE:</label>
+                <input type="text" id="ibge" readonly>
+            </div>
+            <div class="form-group">
+                <label> GIA:</label>
+                <input type="text" id="gia" readonly>
+            </div>
+            <div class="form-group">
+                <label> DDD:</label>
+                <input type="text" id="ddd" readonly>
+            </div>
+            <div class="form-group">
+                <label> SIAFI:</label>
+                <input type="text" id="siafi" readonly>
+            </div>
+        </main>
+    </body>
+    <script>
+        async function buscarCep() {
+            const cep = document.getElementById('cep').value;
+
+            if(cep.length == 8) {
+                try{
+                    const url = `https://viacep.com.br/ws/${cep}/json/`;
+                    const response = await fetch(url);
+
+                    const data = await response.json();
+
+                    if(data.erro) {
+                        alert("CEP não encontrado.");
+                        return;
+                    }else{
+                    document.getElementById('logradouro').value = data.logradouro;
+                    document.getElementById('bairro').value = data.bairro;
+                    document.getElementById('complemento').value = data.complemento;
+                    document.getElementById('unidade').value = data.unidade;
+                    document.getElementById('localidade').value = data.localidade;
+                    document.getElementById('uf').value = data.uf;
+                    document.getElementById('estado').value = data.estado;
+                    document.getElementById('regiao').value = data.regiao;
+                    document.getElementById('ibge').value = data.ibge;
+                    document.getElementById('gia').value = data.gia;
+                    document.getElementById('ddd').value = data.ddd;
+                    document.getElementById('siafi').value = data.siafi;
+                    }
+                } catch (error) {
+                    console.error("Erro ao buscar o CEP:", error);
+                }
+            }
+        }
+    </script>
+</html>
