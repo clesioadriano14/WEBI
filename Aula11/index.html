@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula Local storage</title>
+    </head>
+    <body>
+        <h1 id="h1_nome">Qual o nome?</h1>
+        <script>
+        //localStorage.removeItem("nome");
+        if (localStorage.getItem("nome")!==null) {
+            const texto = document.getElementById("h1_nome");
+            texto.textContent = localStorage.getItem("nome");
+        }else{
+            localStorage.setItem("nome", prompt("Entre com seu nome: "))
+        }
+
+        const alunos = ["Ana", "Beto", "Caio"];
+        const texto = JSON.stringfy(alunos);
+        console.log(texto);
+        //["Ana", "Beto", "Caio"]
+        localStorage.setItem("alunos", texto);
+    </script>
+    </body>
+</html>
