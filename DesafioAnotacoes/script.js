@@ -32,9 +32,9 @@ formulario.addEventListener("submit", function (event) {
 
 function excluir(id) {
   const tarefasAtualizadas = obterTarefas().filter(tarefa => tarefa.id !== id);
-  
+
   localStorage.setItem("tarefas", JSON.stringify(tarefasAtualizadas));
-  
+
   listar();
 }
 
@@ -53,15 +53,13 @@ function listar() {
 
     const botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "Excluir";
-    botaoExcluir.classList.add("btn-excluir"); 
+    botaoExcluir.classList.add("btn-excluir");
     botaoExcluir.addEventListener("click", () => excluir(tarefa.id));
 
     item.appendChild(tituloElemento);
     item.appendChild(descricaoElemento);
     item.appendChild(botaoExcluir);
-    
     lista.appendChild(item);
   });
 }
-
 listar();
