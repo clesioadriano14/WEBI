@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Anotações</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="container">
+            <h1>Caderno de Anotações</h1>
+
+            <form id="form-anotacao" class="formulario">
+                <input type="text" id="titulo" placeholder="Título da anotação" required>
+                <textarea id="descricao" rows="3" placeholder="Descrição da anotação..." required></textarea>
+                <button type="submit">Salvar Anotação</button>
+            </form>
+
+            <ul id="lista-anotacoes" class="lista"></ul>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
